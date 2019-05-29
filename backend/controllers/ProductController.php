@@ -30,13 +30,16 @@ class ProductController extends Controller
         ];
     }
 
+    /**
+     * @return string
+     */
     public function actionIndex()
     {
         $model = new Product();
         $categories = Category::find()->all();
         $array = [];
         foreach ($categories as $category) {
-            $array[$category->id] = $category->name;
+            $array[$category->id] = $category->namePath . $category->name;
         }
         return $this->render('index', [
             'model' => $model,
@@ -44,6 +47,10 @@ class ProductController extends Controller
         ]);
     }
 
+    /**
+     * @return \yii\web\Response
+     * @throws ForbiddenHttpException
+     */
     public function actionCreate()
     {
         $model = new Product();

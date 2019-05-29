@@ -12,9 +12,9 @@ $this->title = 'My Yii Application';
     // single query fetch to render the tree
     'query'             => Category::find()->addOrderBy('root, lft'),
     'headingOptions'    => ['label' => 'Categories'],
-    'isAdmin'           => false,                       // optional (toggle to enable admin mode)
-    'displayValue'      => 1,                           // initial display value
-
+    'isAdmin'           => false,
+    'displayValue'      => 1,
+        'nodeView' => '@frontend/widgets/views/tree_menu'
     ]);
     ?>
 </div>

@@ -194,18 +194,6 @@ $icons = is_array($iconsList) ? array_values($iconsList) : $iconsList;
      */
     ?>
     <div class="kv-detail-heading">
-        <?php if (empty($inputOpts['disabled']) || ($isAdmin && $showFormButtons)): ?>
-            <div class="float-right pull-right">
-                <?= Html::resetButton(
-                    ArrayHelper::getValue($nodeViewButtonLabels, 'reset', $resetTitle),
-                    ['class' => 'btn ' . $defaultBtnCss, 'title' => $resetTitle]
-                ) ?>
-                <?= Html::submitButton(
-                    ArrayHelper::getValue($nodeViewButtonLabels, 'submit', $submitTitle),
-                    ['class' => 'btn btn-primary', 'title' => $submitTitle]
-                ) ?>
-            </div>
-        <?php endif; ?>
         <div class="kv-detail-crumbs"><?= $name ?></div>
         <div class="clearfix"></div>
     </div>
@@ -282,7 +270,7 @@ $icons = is_array($iconsList) ? array_values($iconsList) : $iconsList;
 
     <?php
     /**
-     * SECTION 8: Additional views part 2 - before admin zone.
+     * SECTION 8: Additional views part 2 - befos admin zone.
      */
     ?>
     <?= $renderContent(Module::VIEW_PART_2) ?>
