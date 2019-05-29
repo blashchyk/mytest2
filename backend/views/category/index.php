@@ -8,7 +8,7 @@ use common\models\Category;
 
 <div class="category-form">
 
-    <?php $form = ActiveForm::begin(['action' => 'create']); ?>
+    <?php $form = ActiveForm::begin(['action' => 'admin/category/create']); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
