@@ -63,8 +63,9 @@ Installation:
 
 1. php init (1)
 2. composer install
-3. php yii migrate
-4. php yii migrate/up --migrationPath=@vendor/kartik-v/yii2-tree-manager/src/migrations
+3. создать базу данных и внести настройки подключения в файл /common/config/main-local.php
+4. php yii migrate
+5. php yii migrate/up --migrationPath=@vendor/kartik-v/yii2-tree-manager/src/migrations
 
 
-5. Вход в админку сайта siteName/admin (username: admin, пароль: qwerty)
+6. Вход в админку сайта siteName/admin (username: admin, пароль: qwerty)
