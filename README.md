@@ -58,3 +58,13 @@ frontend
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
+
+Installation:
+
+1. php init (1)
+2. composer install
+3. php yii migrate
+4. php yii migrate/up --migrationPath=@vendor/kartik-v/yii2-tree-manager/src/migrations
+
+
+5. Вход в админку сайта siteName/admin (username: admin, пароль: qwerty)
